@@ -1,0 +1,71 @@
+"calculadora"
+def calculadora():
+    print("Menu: Calculadora")
+    print("1. Soma")
+    print("2. Subtração")
+    print("3. Divisão")
+    print("4. Multiplicação")
+
+    opcao = input("Qual opção deseja? ")
+
+    if opcao in ["1", "2", "3", "4"]:
+        num1 = float(input("Digite o primeiro número: "))
+        num2 = float(input("Digite o segundo número: "))
+
+        if opcao == "1":
+            resultado = num1 + num2
+            print("Resultado da Soma:", resultado)
+        elif opcao == "2":
+            resultado = num1 - num2
+            print("Resultado da Subtração:", resultado)
+        elif opcao == "3":
+            if num2 == 0:
+                print("Erro: Divisão por zero não é permitida.")
+            else:
+                resultado = num1 / num2
+                print("Resultado da Divisão:", resultado)
+        elif opcao == "4":
+            resultado = num1 * num2
+            print("Resultado da Multiplicação:", resultado)
+    else:
+        print("Opção inválida. Tente novamente.")
+
+# Executar a calculadora
+calculadora()
+
+"atividade aventura"
+def aventura_na_floresta():
+    print("Você está em uma floresta e precisa escolher um caminho.")
+    print("1. Caminho da esquerda (rio)")
+    print("2. Caminho da direita (montanha)")
+    escolha = input("Digite 1 para esquerda ou 2 para direita: ")
+
+    if escolha == "1":
+        print("\nVocê escolheu o caminho da esquerda e encontrou um rio.")
+        print("Você quer tentar atravessar o rio?")
+        print("1. Sim")
+        print("2. Não")
+        atravessar = input("Digite 1 para atravessar ou 2 para voltar: ")
+        if atravessar == "1":
+            print("\nVocê atravessou o rio com sucesso e encontrou uma clareira segura. Fim da aventura!")
+        else:
+            print("\nVocê decidiu não atravessar e voltou ao ponto inicial. Fim da aventura.")
+    elif escolha == "2":
+        print("\nVocê escolheu o caminho da direita e encontrou uma montanha.")
+        print("Você quer tentar subir a montanha?")
+        print("1. Sim")
+        print("2. Não")
+        subir = input("Digite 1 para subir ou 2 para voltar: ")
+        if subir == "1":
+            print("\nVocê escalou a montanha e encontrou uma vista incrível do vale. Fim da aventura!")
+        else:
+            print("\nVocê decidiu não subir e voltou ao ponto inicial. Fim da aventura.")
+    else:
+        print("\nEscolha inválida. A aventura terminou antes de começar.")
+
+# Executar o programa
+aventura_na_floresta()
+
+
+
+
